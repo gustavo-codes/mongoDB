@@ -45,3 +45,10 @@
 17/07/2025 14:13:18 - INFO - ENDPOINT de paginação chamado
 17/07/2025 14:13:18 - DEBUG - 0
 17/07/2025 14:13:18 - DEBUG - AsyncIOMotorCursor(<pymongo.synchronous.cursor.Cursor object at 0x7d913713ce60>)
+17/07/2025 14:35:13 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 14:35:25 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 14:38:28 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 14:38:34 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 14:38:55 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 14:39:24 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 14:41:55 - INFO - ENDPOINT listar quantidade de usuários chamado
