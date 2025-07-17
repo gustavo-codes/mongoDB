@@ -34,8 +34,8 @@ def validar_id(id:str):
     logging.info(f"Validação de id : {id}")
     try:
         obj_id = ObjectId(id)
-    except InvalidId:
-        logging.warning(f"Erro ao validar id : {InvalidId}")
+    except InvalidId as e:
+        logging.warning(f"Erro ao validar id : {e}")
         raise HTTPException(detail=f'ID {id} inválido', status_code=400)
 
 async def quantidade_total_ocorrencias(tipo:str):
