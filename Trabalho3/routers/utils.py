@@ -5,6 +5,7 @@ from db import terrenos_collection, pessoas_collection, obras_collection, constr
 from bson import ObjectId
 from bson.errors import InvalidId
 from motor.motor_asyncio import AsyncIOMotorCollection
+from logs import logging
 
 class ModelMapEntry(TypedDict):
     type: Type
@@ -30,11 +31,16 @@ map: Dict[str, ModelMapEntry] = {
 }
 
 def validar_id(id:str):
+    logging.info(f"Validação de id : {id}")
     try:
         obj_id = ObjectId(id)
-    except InvalidId:
+    except InvalidId as e:
+        logging.warning(f"Erro ao validar id : {e}")
         raise HTTPException(detail=f'ID {id} inválido', status_code=400)
 
+async def quantidade_total_ocorrencias(tipo:str):
+    return await map[tipo]['collection'].count_documents({})
+ 
 async def listar(tipo:str):
     data = await map[tipo]['collection'].find().to_list()
     return [map[tipo]['type'].from_mongo(d) for d in data]

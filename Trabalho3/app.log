@@ -1,0 +1,54 @@
+17/07/2025 13:19:33 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 13:19:59 - INFO - ENDPOINT criar pessoa chamado
+17/07/2025 13:20:39 - INFO - ENDPOINT terrono a pessoas chamado
+17/07/2025 13:21:03 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 13:21:10 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 13:22:01 - INFO - ENDPOINT atualizar pessoa chamado com o id 68779b9f34c55dfab967c3cb e corpo nome='Mário' email='marioaragao@alu.ufc.br' idade=21 telefone='string' profissao='Programador na JIT'
+17/07/2025 13:23:15 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 13:23:24 - INFO - ENDPOINT de deletar pessoa chamado para pessoa de id 68779b9f34c55dfab967c3cb
+17/07/2025 13:31:38 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 13:36:05 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 13:36:17 - INFO - ENDPOINT terrono a pessoas chamado
+17/07/2025 13:38:35 - INFO - ENDPOINT terrono a pessoas chamado
+17/07/2025 13:38:35 - WARNING - Problema ao processar a busca por terreno
+17/07/2025 13:40:18 - INFO - ENDPOINT terrono a pessoas chamado
+17/07/2025 13:40:18 - WARNING - Problema ao processar a busca por terreno : '20' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+17/07/2025 13:41:24 - INFO - ENDPOINT terrono a pessoas chamado
+17/07/2025 13:41:24 - WARNING - Problema ao processar a busca por terreno : '20' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+17/07/2025 13:41:33 - INFO - ENDPOINT terrono a pessoas chamado
+17/07/2025 13:41:33 - WARNING - Problema ao processar a busca por terreno : '20' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+17/07/2025 13:42:24 - INFO - ENDPOINT terrono a pessoas chamado
+17/07/2025 13:42:24 - WARNING - Problema ao processar a busca por terreno de id 20. Erro: '20' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+17/07/2025 13:43:58 - INFO - ENDPOINT terrono a pessoas chamado
+17/07/2025 13:43:58 - WARNING - Problema ao processar a busca por terreno de id 20. Erro: '20' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+17/07/2025 13:44:38 - INFO - ENDPOINT terrono a pessoas chamado
+17/07/2025 13:44:38 - WARNING - Problema ao processar a busca por terreno de id as8123n9dac9dmmdaica. Erro: 'as8123n9dac9dmmdaica' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+17/07/2025 13:44:48 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 13:45:03 - INFO - ENDPOINT terrono a pessoas chamado
+17/07/2025 13:45:03 - INFO - Terreno de id 687922af77e739465a7a4652 não encontrado
+17/07/2025 13:48:01 - INFO - ENDPOINT de deletar pessoa chamado para pessoa de id iadamdiid1923123123123
+17/07/2025 13:48:06 - INFO - ENDPOINT de deletar pessoa chamado para pessoa de id iadamdiid1923123123123
+17/07/2025 13:48:06 - INFO - Validação de id : iadamdiid1923123123123
+17/07/2025 13:48:06 - WARNING - Erro ao validar id : <class 'bson.errors.InvalidId'>
+17/07/2025 13:56:50 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 13:56:50 - INFO - Erro ao acessar o total de ocorrencias de usuário. Erro: object of type 'coroutine' has no len()
+17/07/2025 13:57:00 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 13:57:00 - INFO - Erro ao acessar o total de ocorrencias de usuário. Erro: object of type 'coroutine' has no len()
+17/07/2025 13:57:04 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 13:57:17 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 13:57:17 - INFO - Erro ao acessar o total de ocorrencias de usuário. Erro: object of type 'coroutine' has no len()
+17/07/2025 13:58:07 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 13:58:07 - INFO - Erro ao acessar o total de ocorrencias de usuário. Erro: object of type 'coroutine' has no len()
+17/07/2025 13:58:15 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 13:58:15 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 14:12:53 - INFO - ENDPOINT de paginação chamado
+17/07/2025 14:13:18 - INFO - ENDPOINT de paginação chamado
+17/07/2025 14:13:18 - DEBUG - 0
+17/07/2025 14:13:18 - DEBUG - AsyncIOMotorCursor(<pymongo.synchronous.cursor.Cursor object at 0x7d913713ce60>)
+17/07/2025 14:35:13 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 14:35:25 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 14:38:28 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 14:38:34 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 14:38:55 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 14:39:24 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 14:41:55 - INFO - ENDPOINT listar quantidade de usuários chamado
