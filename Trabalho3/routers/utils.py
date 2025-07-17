@@ -38,6 +38,9 @@ def validar_id(id:str):
         logging.warning(f"Erro ao validar id : {InvalidId}")
         raise HTTPException(detail=f'ID {id} inválido', status_code=400)
 
+async def quantidade_total_ocorrencias(tipo:str):
+    return await map[tipo]['collection'].count_documents({})
+ 
 async def listar(tipo:str):
     data = await map[tipo]['collection'].find().to_list()
     return [map[tipo]['type'].from_mongo(d) for d in data]

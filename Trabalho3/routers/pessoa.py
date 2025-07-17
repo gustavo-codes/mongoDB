@@ -3,7 +3,7 @@ from models import Pessoa, PessoaBase, PessoaPatch
 from typing import List
 from db import pessoas_collection, terrenos_collection
 from bson import ObjectId
-from routers.utils import listar, criar, atualizar, deletar, patch,validar_id
+from routers.utils import listar, criar, atualizar, deletar, patch,validar_id, quantidade_total_ocorrencias
 from logs import logging
 router = APIRouter(prefix='/pessoas', tags=['Pessoas'])
 
@@ -18,7 +18,7 @@ async def listar_pessoas():
 async def quantidade_total_de_usuarios():
     logging.info("ENDPOINT listar quantidade de usuários chamado")
     try:
-        total = len( await listar_pessoas())
+        total = await quantidade_total_ocorrencias('pessoa')
     except Exception as e:
         logging.info(f"Erro ao acessar o total de ocorrencias de usuário. Erro: {e}")
         raise HTTPException(status_code=500, detail=f"Erro ao acessar o total de ocorrencias de usuário. Erro: {e}")
@@ -34,7 +34,7 @@ async def criar_pessoa(pessoa:PessoaBase):
 #Adicionar um terreno a uma pesssoa
 @router.post('/{pessoa_id}/adicionar-terreno/{terreno_id}')
 async def adicionar_terreno_a_pessoa(pessoa_id:str,terreno_id:str):
-    logging.info("ENDPOINT terrono a pessoas chamado")
+    logging.info("ENDPOINT linkar terreno a pessoas chamado")
     
     validar_id(pessoa_id)
     validar_id(terreno_id)
