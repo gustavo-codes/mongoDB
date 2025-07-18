@@ -6,6 +6,7 @@ from bson import ObjectId
 from bson.errors import InvalidId
 from motor.motor_asyncio import AsyncIOMotorCollection
 from logs import logging
+import math
 
 class ModelMapEntry(TypedDict):
     type: Type
@@ -36,10 +37,26 @@ def validar_id(id:str):
         obj_id = ObjectId(id)
     except InvalidId as e:
         logging.warning(f"Erro ao validar id : {e}")
-        raise HTTPException(detail=f'ID {id} inválido', status_code=400)
+        raise HTTPException(detail=f'ID {id} inválido', status_code=400)   
 
 async def quantidade_total_ocorrencias(tipo:str):
     return await map[tipo]['collection'].count_documents({})
+
+
+async def paginacao(tipo:str, pagina : int = 1, limite : int = 10):
+    if pagina < 1 or limite < 1:
+        logging.info("Paginação não foi concluida pois os valores de pagina ou limite são menores que 1")
+        raise HTTPException(status_code=400,detail="Valores precisam ser inteiros maiores que 0")
+    skip = (pagina - 1) * limite
+    cursor = map[tipo]['collection'].find().skip(skip).limit(limite)
+    data = await cursor.to_list(length = limite)
+    to_return = [map[tipo]['type'].from_mongo(d) for d in data]
+    total_paginas = math.ceil((await quantidade_total_ocorrencias(tipo))/limite)
+    return {
+        "data" : to_return,
+        "pagina_atual" : pagina,
+        "total_paginas" : total_paginas
+    }
  
 async def listar(tipo:str):
     data = await map[tipo]['collection'].find().to_list()

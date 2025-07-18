@@ -3,7 +3,7 @@ from models import Pessoa, PessoaBase, PessoaPatch
 from typing import List
 from db import pessoas_collection, terrenos_collection
 from bson import ObjectId
-from routers.utils import listar, criar, atualizar, deletar, patch,validar_id, quantidade_total_ocorrencias
+from routers.utils import listar, criar, atualizar, deletar, patch,validar_id, quantidade_total_ocorrencias , paginacao
 from logs import logging
 router = APIRouter(prefix='/pessoas', tags=['Pessoas'])
 
@@ -24,6 +24,10 @@ async def quantidade_total_de_usuarios():
         raise HTTPException(status_code=500, detail=f"Erro ao acessar o total de ocorrencias de usuário. Erro: {e}")
     return {"Quantidade":total}
 
+@router.get('/paginacao')
+async def paginacao_usuario(pagina: int = 1 , limite: int = 10):
+    logging.info("ENDPOINT de paginacao chamado")
+    return await paginacao('pessoa', pagina, limite)
 
 #Adicionar uma nova pessoa no banco
 @router.post('/')

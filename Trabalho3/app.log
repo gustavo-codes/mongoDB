@@ -52,3 +52,25 @@
 17/07/2025 14:38:55 - INFO - ENDPOINT listar quantidade de usuários chamado
 17/07/2025 14:39:24 - INFO - ENDPOINT listar quantidade de usuários chamado
 17/07/2025 14:41:55 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 15:53:41 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 15:54:11 - INFO - ENDPOINT criar pessoa chamado nome='Cabeça' email='cabeça@example.com' idade=20 telefone='12312312312312312' profissao='Jurgergeee'
+17/07/2025 15:54:28 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 15:54:35 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 21:29:22 - INFO - ENDPOINT listar pessoas chamado
+17/07/2025 21:32:46 - INFO - ENDPOINT listar quantidade de usuários chamado
+17/07/2025 21:32:54 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:33:29 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:34:07 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:34:34 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:36:56 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:37:15 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:38:09 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:38:15 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:38:21 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:38:27 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:38:35 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:40:43 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:40:43 - INFO - Paginação não foi concluida pois os valores de pagina ou limite são menores que 1
+17/07/2025 21:40:50 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 21:40:56 - INFO - ENDPOINT de paginacao chamado
+17/07/2025 22:13:47 - INFO - ENDPOINT de paginacao chamado
