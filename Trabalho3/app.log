@@ -74,3 +74,38 @@
 17/07/2025 21:40:50 - INFO - ENDPOINT de paginacao chamado
 17/07/2025 21:40:56 - INFO - ENDPOINT de paginacao chamado
 17/07/2025 22:13:47 - INFO - ENDPOINT de paginacao chamado
+18/07/2025 12:55:03 - INFO - ENDPOINT listar pessoas chamado
+18/07/2025 12:56:03 - INFO - ENDPOINT criar pessoa chamado nome='Bruno' email='bruno@example.com' idade=23 telefone='string' profissao='string'
+18/07/2025 13:11:33 - INFO - Validação de id : 687922af77e739465a7a4653
+18/07/2025 13:12:37 - INFO - Busca parcial no tipo pessoa, atributo buscado id, valor passado 687922af77e739465a7a4653
+18/07/2025 13:12:37 - INFO - Validação de id : 687922af77e739465a7a4653
+18/07/2025 13:15:08 - INFO - Busca parcial no tipo pessoa, atributo buscado id, valor passado 687922af77e739465a7a4653
+18/07/2025 13:15:08 - INFO - Campo procurado é um ID
+18/07/2025 13:15:08 - INFO - Validação de id : 687922af77e739465a7a4653
+18/07/2025 13:15:08 - INFO - {'_id': ObjectId('687922af77e739465a7a4653'), 'nome': 'Breno', 'email': 'breno@example.com', 'idade': 18, 'telefone': 'string', 'profissao': 'string'}
+18/07/2025 13:16:10 - INFO - Busca parcial no tipo pessoa, atributo buscado id, valor passado 687922af77e739465a7a4653
+18/07/2025 13:16:10 - INFO - Campo procurado é um ID
+18/07/2025 13:16:10 - INFO - Validação de id : 687922af77e739465a7a4653
+18/07/2025 13:16:10 - INFO - {'_id': ObjectId('687922af77e739465a7a4653'), 'nome': 'Breno', 'email': 'breno@example.com', 'idade': 18, 'telefone': 'string', 'profissao': 'string'}
+18/07/2025 13:16:10 - INFO - id='687922af77e739465a7a4653' nome='Breno' email='breno@example.com' idade=18 telefone='string' profissao='string' terrenos_ids=[]
+18/07/2025 13:16:32 - INFO - Busca parcial no tipo pessoa, atributo buscado id, valor passado 687922af77e739465a7a4653
+18/07/2025 13:16:32 - INFO - Campo procurado é um ID
+18/07/2025 13:16:32 - INFO - Validação de id : 687922af77e739465a7a4653
+18/07/2025 13:16:32 - INFO - {'_id': ObjectId('687922af77e739465a7a4653'), 'nome': 'Breno', 'email': 'breno@example.com', 'idade': 18, 'telefone': 'string', 'profissao': 'string'}
+18/07/2025 13:16:32 - INFO - id='687922af77e739465a7a4653' nome='Breno' email='breno@example.com' idade=18 telefone='string' profissao='string' terrenos_ids=[]
+18/07/2025 13:17:48 - INFO - Busca parcial no tipo pessoa, atributo buscado mario, valor passado 687922af77e739465a7a4653
+18/07/2025 13:18:06 - INFO - Busca parcial no tipo pessoa, atributo buscado mario, valor passado 687922af77e739465a7a4653
+18/07/2025 13:18:23 - INFO - Busca parcial no tipo pessoa, atributo buscado id, valor passado 687922af77e739465a7a4653
+18/07/2025 13:18:41 - INFO - Busca parcial no tipo pessoa, atributo buscado dadadadasdad, valor passado 103103
+18/07/2025 13:19:37 - INFO - Busca parcial no tipo pessoa, atributo buscado dadadadasdad, valor passado 103103
+18/07/2025 13:19:42 - INFO - Busca parcial no tipo pessoa, atributo buscado id, valor passado 103103
+18/07/2025 13:20:21 - INFO - Busca parcial no tipo pessoa, atributo buscado id, valor passado 103103
+18/07/2025 13:20:42 - INFO - Busca parcial no tipo pessoa, atributo buscado nome, valor passado 103103
+18/07/2025 13:46:28 - INFO - Busca parcial no tipo pessoa, atributo buscado nome, valor passado Bru
+18/07/2025 13:46:37 - INFO - Busca parcial no tipo pessoa, atributo buscado idade, valor passado 23
+18/07/2025 13:48:14 - INFO - Busca parcial no tipo pessoa, atributo buscado idade, valor passado 23
+18/07/2025 13:48:14 - INFO - Campo data da regex vazio
+18/07/2025 13:49:26 - INFO - Busca parcial no tipo pessoa, atributo buscado idade, valor passado 23
+18/07/2025 13:49:26 - INFO - Campo data da regex vazio
+18/07/2025 13:49:48 - INFO - Busca parcial no tipo pessoa, atributo buscado dkadkad, valor passado 23
+18/07/2025 13:49:48 - INFO - Campo data da regex vazio
