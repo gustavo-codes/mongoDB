@@ -30,7 +30,7 @@ async def paginacao_usuario(pagina: int = 1 , limite: int = 10):
     return await paginacao('pessoa', pagina, limite)
 
 
-#Filtro por atributo expecifico
+#Filtro por atributo específico
 @router.get("/filter/")
 async def filtro(atributo:str, busca:str):
     return await busca_parcial('pessoa',atributo,busca)

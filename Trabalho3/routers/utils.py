@@ -59,9 +59,9 @@ async def busca_parcial(tipo: str, campo: str, valor: str):
     
     if not data:
         logging.info("Campo data da regex vazio")
-        #Para compos numericos
+        #Para campos numericos
         filtro = {campo: int(valor)}
-        data = await map[tipo]['collection'].find(filtro).to_list()    
+        data = await map[tipo]["collection"].find(filtro).to_list()    
         
     
     return [map[tipo]["type"].from_mongo(d) for d in data]
