@@ -46,7 +46,7 @@ async def quantidade_total_ocorrencias(tipo:str):
 async def paginacao(tipo:str, pagina : int = 1, limite : int = 10):
     if pagina < 1 or limite < 1:
         logging.info("Paginação não foi concluida pois os valores de pagina ou limite são menores que 1")
-        raise HTTPException(status_code=404,detail="Valores precisam ser inteiros maiores que 0")
+        raise HTTPException(status_code=400,detail="Valores precisam ser inteiros maiores que 0")
     skip = (pagina - 1) * limite
     cursor = map[tipo]['collection'].find().skip(skip).limit(limite)
     data = await cursor.to_list(length = limite)
@@ -54,8 +54,8 @@ async def paginacao(tipo:str, pagina : int = 1, limite : int = 10):
     total_paginas = math.ceil((await quantidade_total_ocorrencias(tipo))/limite)
     return {
         "data" : to_return,
-        "pagina atual" : pagina,
-        "total paginas" : total_paginas
+        "pagina_atual" : pagina,
+        "total_paginas" : total_paginas
     }
  
 async def listar(tipo:str):

@@ -24,10 +24,10 @@ async def quantidade_total_de_usuarios():
         raise HTTPException(status_code=500, detail=f"Erro ao acessar o total de ocorrencias de usuário. Erro: {e}")
     return {"Quantidade":total}
 
-@router.get('/paginacao/{pagina}/{limite}')
-async def paginacao_usuario(pagina : int = 1 , limite : int = 10):
+@router.get('/paginacao')
+async def paginacao_usuario(pagina: int = 1 , limite: int = 10):
     logging.info("ENDPOINT de paginacao chamado")
-    return await paginacao('pessoa',pagina,limite)
+    return await paginacao('pessoa', pagina, limite)
 
 #Adicionar uma nova pessoa no banco
 @router.post('/')
