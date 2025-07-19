@@ -109,3 +109,102 @@
 18/07/2025 13:49:26 - INFO - Campo data da regex vazio
 18/07/2025 13:49:48 - INFO - Busca parcial no tipo pessoa, atributo buscado dkadkad, valor passado 23
 18/07/2025 13:49:48 - INFO - Campo data da regex vazio
+18/07/2025 14:00:44 - INFO - Busca parcial no tipo pessoa, atributo buscado idade, valor passado 23
+18/07/2025 14:00:44 - INFO - Campo data da regex vazio
+19/07/2025 10:39:07 - INFO - ENDPOINT listar pessoas chamado
+19/07/2025 10:39:22 - INFO - ENDPOINT listar quantidade de usuários chamado
+19/07/2025 10:41:58 - INFO - ENDPOINT criar pessoa chamado nome='Mário' email='marioaragao@alu.ufc.br' idade=21 telefone='85996734867' profissao='Programador'
+19/07/2025 10:42:03 - INFO - ENDPOINT linkar terreno a pessoas chamado
+19/07/2025 10:42:03 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 10:42:03 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+19/07/2025 10:42:03 - INFO - Terreno de id 687ba06d8990fa02bc1148d4 adicionado na lista de terrenos da pessoa de id 687ba0a68990fa02bc1148d5
+19/07/2025 10:42:10 - INFO - ENDPOINT listar quantidade de usuários chamado
+19/07/2025 10:42:16 - INFO - ENDPOINT listar pessoas chamado
+19/07/2025 10:43:21 - INFO - Busca parcial no tipo pessoa, atributo buscado nome, valor passado mario
+19/07/2025 10:43:21 - INFO - Campo data da regex vazio
+19/07/2025 10:44:15 - INFO - Busca parcial no tipo pessoa, atributo buscado nome, valor passado mario
+19/07/2025 10:44:15 - INFO - Campo data da regex vazio
+19/07/2025 10:44:45 - INFO - Busca parcial no tipo pessoa, atributo buscado nome, valor passado M
+19/07/2025 10:44:52 - INFO - Busca parcial no tipo pessoa, atributo buscado nome, valor passado m
+19/07/2025 10:52:02 - INFO - ENDPOINT listar pessoas chamado
+19/07/2025 10:52:13 - INFO - ENDPOINT listar quantidade de usuários chamado
+19/07/2025 10:52:19 - INFO - ENDPOINT de paginacao chamado - pagina: 1, limite: 10
+19/07/2025 10:52:43 - INFO - Busca parcial no tipo pessoa, atributo buscado nome, valor passado m
+19/07/2025 10:52:48 - WARNING - Atributo de filtro inválido: dadad
+19/07/2025 10:52:56 - INFO - Busca parcial no tipo pessoa, atributo buscado idade, valor passado m
+19/07/2025 10:52:56 - INFO - Valor m não é numérico para campo idade
+19/07/2025 10:53:03 - INFO - Busca parcial no tipo pessoa, atributo buscado idade, valor passado 23
+19/07/2025 10:53:12 - INFO - Busca parcial no tipo pessoa, atributo buscado id, valor passado 123123
+19/07/2025 10:53:12 - INFO - Campo procurado é um ID
+19/07/2025 10:53:12 - INFO - Validação de id : 123123
+19/07/2025 10:53:12 - WARNING - Erro ao validar id : '123123' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+19/07/2025 10:53:12 - ERROR - Erro ao filtrar pessoas: 400: ID 123123 inválido
+19/07/2025 10:53:26 - INFO - ENDPOINT listar pessoas chamado
+19/07/2025 10:53:32 - INFO - Busca parcial no tipo pessoa, atributo buscado id, valor passado 687ba0a68990fa02bc1148d5
+19/07/2025 10:53:32 - INFO - Campo procurado é um ID
+19/07/2025 10:53:32 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 10:56:57 - INFO - Busca parcial no tipo pessoa, atributo buscado id, valor passado 687ba0a68990fa02bc1148d5
+19/07/2025 10:56:57 - INFO - Campo procurado é um ID
+19/07/2025 10:56:57 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 10:58:03 - INFO - ENDPOINT de filtro chamado para atributo id e busca 687ba0a68990fa02bc1148d5
+19/07/2025 10:58:03 - INFO - {'id': FieldInfo(annotation=str, required=True), 'nome': FieldInfo(annotation=str, required=True), 'email': FieldInfo(annotation=EmailStr, required=True), 'idade': FieldInfo(annotation=int, required=True), 'telefone': FieldInfo(annotation=str, required=True), 'profissao': FieldInfo(annotation=str, required=True), 'terrenos_ids': FieldInfo(annotation=List[str], required=False, default=[])}
+19/07/2025 10:58:03 - INFO - Busca parcial no tipo pessoa, atributo buscado id, valor passado 687ba0a68990fa02bc1148d5
+19/07/2025 10:58:03 - INFO - Campo procurado é um ID
+19/07/2025 10:58:03 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 11:02:45 - INFO - ENDPOINT de filtro chamado para atributo id e busca 687ba0a68990fa02bc1148d5
+19/07/2025 11:02:45 - INFO - {'id': FieldInfo(annotation=str, required=True), 'nome': FieldInfo(annotation=str, required=True), 'email': FieldInfo(annotation=EmailStr, required=True), 'idade': FieldInfo(annotation=int, required=True), 'telefone': FieldInfo(annotation=str, required=True), 'profissao': FieldInfo(annotation=str, required=True), 'terrenos_ids': FieldInfo(annotation=List[str], required=False, default=[])}
+19/07/2025 11:02:45 - INFO - Busca parcial no tipo pessoa, atributo buscado id, valor passado 687ba0a68990fa02bc1148d5
+19/07/2025 11:02:45 - INFO - Campo procurado é um ID
+19/07/2025 11:02:45 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 11:17:06 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:17:57 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:17:57 - INFO - Validação de id : 1231
+19/07/2025 11:17:57 - WARNING - Erro ao validar id : id must be an instance of (bytes, str, ObjectId), not <class 'int'>
+19/07/2025 11:17:57 - INFO - Erro: 400: ID 1231 inválido
+19/07/2025 11:18:04 - INFO - ENDPOINT listar pessoas chamado
+19/07/2025 11:18:54 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:18:54 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 11:18:54 - INFO - <Future pending cb=[_chain_future.<locals>._call_check_cancel() at /home/mario/anaconda3/lib/python3.12/asyncio/futures.py:391]>
+19/07/2025 11:19:25 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:19:25 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 11:19:25 - INFO - {'_id': ObjectId('687ba0a68990fa02bc1148d5'), 'nome': 'Mário', 'email': 'marioaragao@alu.ufc.br', 'idade': 21, 'telefone': '85996734867', 'profissao': 'Programador', 'terrenos_ids': [ObjectId('687ba06d8990fa02bc1148d4')]}
+19/07/2025 11:23:09 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:23:09 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 11:25:20 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:25:20 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 11:25:20 - INFO - id='687ba0a68990fa02bc1148d5' nome='Mário' email='marioaragao@alu.ufc.br' idade=21 telefone='85996734867' profissao='Programador' terrenos_ids=['687ba06d8990fa02bc1148d4']
+19/07/2025 11:26:21 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:26:21 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 11:26:21 - INFO - ['687ba06d8990fa02bc1148d4']
+19/07/2025 11:28:15 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:28:15 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 11:28:15 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+19/07/2025 11:28:15 - INFO - Erro: MotorCollection object is not callable. If you meant to call the 'terrenos.find_onde' method on a MotorCollection object it is failing because no such method exists.
+19/07/2025 11:28:44 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:28:44 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 11:28:44 - INFO - Procurando terrenos
+19/07/2025 11:28:44 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+19/07/2025 11:28:44 - INFO - Erro: MotorCollection object is not callable. If you meant to call the 'terrenos.find_onde' method on a MotorCollection object it is failing because no such method exists.
+19/07/2025 11:29:06 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:29:06 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 11:29:06 - INFO - Procurando terrenos
+19/07/2025 11:29:06 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+19/07/2025 11:29:06 - INFO - [{'_id': ObjectId('687ba06d8990fa02bc1148d4'), 'largura': 30.0, 'altua': 20.0, 'disponivel': True, 'preco': 500000.0, 'descricao': 'Terreno na beira da praia', 'endereco': {'rua': 'Rua do Terreno', 'numero': 777, 'cidade': 'Fortim', 'estado': 'Ceará', 'cep': '123123123', 'longitude': 'dad31312', 'latitude': '312313131'}, 'pessoas_ids': [ObjectId('687ba0a68990fa02bc1148d5')]}]
+19/07/2025 11:32:23 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:32:23 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 11:32:23 - INFO - Procurando terrenos
+19/07/2025 11:32:23 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+19/07/2025 11:32:23 - INFO - [Terreno(id='687ba06d8990fa02bc1148d4', largura=30.0, altua=20.0, disponivel=True, preco=500000.0, descricao='Terreno na beira da praia', endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131'), pessoas_ids=['687ba0a68990fa02bc1148d5'], construcoes_ids=[])]
+19/07/2025 11:37:09 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:37:09 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+19/07/2025 11:37:09 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+19/07/2025 11:37:09 - INFO - [Terreno(id='687ba06d8990fa02bc1148d4', largura=30.0, altua=20.0, disponivel=True, preco=500000.0, descricao='Terreno na beira da praia', endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131'), pessoas_ids=['687ba0a68990fa02bc1148d5'], construcoes_ids=[])]
+19/07/2025 11:37:14 - INFO - ENDPOINT listar pessoas chamado
+19/07/2025 11:37:23 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:37:23 - INFO - Validação de id : adadad
+19/07/2025 11:37:23 - WARNING - Erro ao validar id : 'adadad' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+19/07/2025 11:37:23 - ERROR - Erro: 400: ID adadad inválido
+19/07/2025 11:37:35 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+19/07/2025 11:37:35 - INFO - Validação de id : 687922af77e739465a7a4653
+19/07/2025 11:37:35 - INFO - []
+19/07/2025 11:38:41 - INFO - ENDPOINT listar quantidade de usuários chamado

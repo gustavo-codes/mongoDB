@@ -28,43 +28,64 @@ map: Dict[str, ModelMapEntry] = {
 
 
 def validar_id(id: str):
+    """Valida se o id fornecido é um ObjectId válido."""
     logging.info(f"Validação de id : {id}")
     try:
         obj_id = ObjectId(id)
-    except InvalidId as e:
+    except (InvalidId, Exception) as e:
         logging.warning(f"Erro ao validar id : {e}")
-        raise HTTPException(detail=f"ID {id} inválido", status_code=400)
+        raise HTTPException(status_code=400, detail=f"ID {id} inválido")
 
 
 async def quantidade_total_ocorrencias(tipo: str):
-    return await map[tipo]["collection"].count_documents({})
+    """Retorna a quantidade total de documentos do tipo informado."""
+    try:
+        return await map[tipo]["collection"].count_documents({})
+    except Exception as e:
+        logging.error(f"Erro ao contar documentos do tipo {tipo}: {e}")
+        raise HTTPException(status_code=500, detail=f"Erro ao contar documentos do tipo {tipo}.")
 
 
 async def busca_parcial(tipo: str, campo: str, valor: str):
+    """Busca parcial por campo e valor, com tratamento para campos string e numéricos."""
     logging.info(
         f"Busca parcial no tipo {tipo}, atributo buscado {campo}, valor passado {valor}"
     )
-    # Saber se o campo existe
+    try:
+        # Saber se o campo existe no modelo
+        if campo not in map[tipo]["type"].__fields__ and campo != "id":
+            logging.warning(f"Campo {campo} não existe no modelo {tipo}")
+            raise HTTPException(status_code=400, detail=f"Campo {campo} não existe no modelo {tipo}.")
 
-    if campo == "id":
-        logging.info("Campo procurado é um ID")
-        validar_id(valor)
-        data = await map[tipo]["collection"].find_one({"_id": ObjectId(valor)})
-        logging.info(data)
-        logging.info(map[tipo]["type"].from_mongo(data))
-        return map[tipo]["type"].from_mongo(data)
+        if campo == "id":
+            logging.info("Campo procurado é um ID")
+            validar_id(valor)
+            data = await map[tipo]["collection"].find_one({"_id": ObjectId(valor)})
+            if not data:
+                logging.info(f"Nenhum registro encontrado para id {valor}")
+                return None
+            return map[tipo]["type"].from_mongo(data)
 
-    filtro = {campo: {"$regex": valor, "$options": "i"}}
-    data = await map[tipo]["collection"].find(filtro).to_list()
-    
-    if not data:
-        logging.info("Campo data da regex vazio")
-        #Para campos numericos
-        filtro = {campo: int(valor)}
-        data = await map[tipo]["collection"].find(filtro).to_list()    
-        
-    
-    return [map[tipo]["type"].from_mongo(d) for d in data]
+        # Tenta busca regex (string)
+        filtro = {campo: {"$regex": valor, "$options": "i"}}
+        data = await map[tipo]["collection"].find(filtro).to_list()
+        if data:
+            return [map[tipo]["type"].from_mongo(d) for d in data]
+
+        # Se não encontrou, tenta busca numérica
+        try:
+            filtro = {campo: int(valor)}
+            data = await map[tipo]["collection"].find(filtro).to_list()
+            if data:
+                return [map[tipo]["type"].from_mongo(d) for d in data]
+        except Exception:
+            logging.info(f"Valor {valor} não é numérico para campo {campo}")
+        return []
+    except HTTPException:
+        raise
+    except Exception as e:
+        logging.error(f"Erro na busca parcial: {e}")
+        raise HTTPException(status_code=500, detail="Erro na busca parcial.")
 
 
 async def paginacao(tipo: str, pagina: int = 1, limite: int = 10):
