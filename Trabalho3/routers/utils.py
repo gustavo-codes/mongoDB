@@ -32,7 +32,6 @@ def validar_id(id: str):
     logging.info(f"Validação de id : {id}")
     try:
         obj_id = ObjectId(id)
-        return obj_id
     except (InvalidId, Exception) as e:
         logging.warning(f"Erro ao validar id : {e}")
         raise HTTPException(status_code=400, detail=f"ID {id} inválido")
