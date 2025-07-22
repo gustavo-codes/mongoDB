@@ -83,7 +83,7 @@ async def criar_obra(obra: ObraBase):
         id = await criar("obra", obra)
         await construcao_collection.update_one(
             {"_id": ObjectId(obra.contrucao_id)},
-            {"$addToSet": {"obras_id": ObjectId(id)}},
+            {"$addToSet": {"obras_ids": ObjectId(id)}},
         )
         return {"msg": "Done"}
     except Exception as e:

@@ -105,8 +105,13 @@ async def paginacao(tipo: str, pagina: int = 1, limite: int = 10):
 
 
 async def listar(tipo: str):
-    data = await map[tipo]["collection"].find().to_list()
-    return [map[tipo]["type"].from_mongo(d) for d in data]
+    logging.info("UTILS listar")
+    try:
+        data = await map[tipo]["collection"].find().to_list()
+        return [map[tipo]["type"].from_mongo(d) for d in data]
+    except Exception as e:
+        logging.info(f"Erro ao listar atributos no utils. Error: {e}")
+        raise HTTPException(status_code=400,detail=f"Erro ao listar atributos no utils. Error: {e}")
 
 
 async def criar(tipo: str, data):

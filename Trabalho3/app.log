@@ -210,3 +210,102 @@
 19/07/2025 11:38:41 - INFO - ENDPOINT listar quantidade de usuários chamado
 22/07/2025 14:17:55 - INFO - ENDPOINT listar terrenos chamado
 22/07/2025 14:18:03 - INFO - ENDPOINT listar quantidade de terrenos chamado
+22/07/2025 14:29:55 - INFO - ENDPOINT listar quantidade de construções chamado
+22/07/2025 14:41:26 - INFO - ENDPOINT listar construções chamado
+22/07/2025 14:42:25 - INFO - ENDPOINT criar construção chamado nome='Construção da casa' descricao='Construçaõ da casa do Mário, 2 quartos, 27 banyheiros e 15 cozinhas' custo_total=5000000.0 tipo='Casa' area=200.0 terreno_id='313123131'
+22/07/2025 14:42:25 - INFO - Validação de id : 313123131
+22/07/2025 14:42:25 - WARNING - Erro ao validar id : '313123131' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+22/07/2025 14:42:25 - ERROR - Erro ao criar construção: 400: ID 313123131 inválido
+22/07/2025 14:44:24 - INFO - ENDPOINT criar construção chamado nome='Construção da casa' descricao='Construçaõ da casa do Mário, 2 quartos, 27 banyheiros e 15 cozinhas' custo_total=5000000.0 tipo='Casa' area=200.0 terreno_id='313123131'
+22/07/2025 14:44:24 - INFO - Validação de id : 313123131
+22/07/2025 14:44:24 - WARNING - Erro ao validar id : '313123131' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+22/07/2025 14:44:44 - INFO - ENDPOINT listar terrenos chamado
+22/07/2025 14:44:53 - INFO - ENDPOINT criar construção chamado nome='Construção da casa' descricao='Construçaõ da casa do Mário, 2 quartos, 27 banyheiros e 15 cozinhas' custo_total=5000000.0 tipo='Casa' area=200.0 terreno_id='687ba06d8990fa02bc1148d4'
+22/07/2025 14:44:53 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+22/07/2025 14:45:02 - INFO - ENDPOINT listar construções chamado
+22/07/2025 14:45:02 - ERROR - Erro ao listar construções: 1 validation error for Construcao
+obras_ids
+  Field required [type=missing, input_value={'nome': 'Construção da...7fce15630e5dcd40d8f92d'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+22/07/2025 14:45:08 - INFO - ENDPOINT listar construções chamado
+22/07/2025 14:45:08 - ERROR - Erro ao listar construções: 1 validation error for Construcao
+obras_ids
+  Field required [type=missing, input_value={'nome': 'Construção da...7fce15630e5dcd40d8f92d'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+22/07/2025 14:47:36 - INFO - ENDPOINT listar construções chamado
+22/07/2025 14:47:36 - INFO - UTILS listar
+22/07/2025 14:47:36 - INFO - Erro ao listar atributos no utils. Error: 1 validation error for Construcao
+obras_ids
+  Field required [type=missing, input_value={'nome': 'Construção da...7fce15630e5dcd40d8f92d'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+22/07/2025 14:47:36 - ERROR - Erro ao listar construções: 400: Erro ao listar atributos no utils. Error: 1 validation error for Construcao
+obras_ids
+  Field required [type=missing, input_value={'nome': 'Construção da...7fce15630e5dcd40d8f92d'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+22/07/2025 14:49:28 - INFO - ENDPOINT listar construções chamado
+22/07/2025 14:49:28 - INFO - UTILS listar
+22/07/2025 14:49:28 - INFO - Erro ao listar atributos no utils. Error: 1 validation error for Construcao
+obras_ids
+  Field required [type=missing, input_value={'nome': 'Construção da...7fce15630e5dcd40d8f92d'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+22/07/2025 14:49:28 - ERROR - Erro ao listar construções: 400: Erro ao listar atributos no utils. Error: 1 validation error for Construcao
+obras_ids
+  Field required [type=missing, input_value={'nome': 'Construção da...7fce15630e5dcd40d8f92d'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+22/07/2025 14:51:47 - INFO - ENDPOINT listar obras chamado
+22/07/2025 14:51:47 - INFO - UTILS listar
+22/07/2025 14:52:47 - INFO - ENDPOINT criar obra chamado nome='Obra Mário' descricao='Contrução casa do mário' inicio=datetime.datetime(2025, 7, 22, 17, 51, 53, 437000, tzinfo=TzInfo(UTC)) fim=datetime.datetime(2025, 7, 22, 17, 51, 53, 437000, tzinfo=TzInfo(UTC)) custo=5000000.0 contrucao_id='687fce15630e5dcd40d8f92d'
+22/07/2025 14:52:47 - INFO - Validação de id : 687fce15630e5dcd40d8f92d
+22/07/2025 14:52:53 - INFO - ENDPOINT listar obras chamado
+22/07/2025 14:52:53 - INFO - UTILS listar
+22/07/2025 14:53:06 - INFO - ENDPOINT listar construções chamado
+22/07/2025 14:53:06 - INFO - UTILS listar
+22/07/2025 14:53:06 - INFO - Erro ao listar atributos no utils. Error: 1 validation error for Construcao
+obras_ids
+  Field required [type=missing, input_value={'nome': 'Construção da...7fce15630e5dcd40d8f92d'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+22/07/2025 14:53:06 - ERROR - Erro ao listar construções: 400: Erro ao listar atributos no utils. Error: 1 validation error for Construcao
+obras_ids
+  Field required [type=missing, input_value={'nome': 'Construção da...7fce15630e5dcd40d8f92d'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+22/07/2025 14:53:39 - INFO - ENDPOINT listar construções chamado
+22/07/2025 14:53:39 - INFO - UTILS listar
+22/07/2025 15:03:38 - INFO - ENDPOINT listar construções chamado
+22/07/2025 15:03:38 - INFO - UTILS listar
+22/07/2025 15:03:51 - INFO - ENDPOINT listar obras chamado
+22/07/2025 15:03:51 - INFO - UTILS listar
+22/07/2025 15:05:57 - INFO - ENDPOINT listar pessoas chamado
+22/07/2025 15:05:57 - INFO - UTILS listar
+22/07/2025 15:06:37 - INFO - ENDPOINT criar pessoa chamado nome='Matheus Conrado' email='conrado@example.com' idade=390 telefone='392818129381203' profissao='Professor'
+22/07/2025 15:06:48 - INFO - ENDPOINT listar pessoas chamado
+22/07/2025 15:06:48 - INFO - UTILS listar
+22/07/2025 15:07:11 - INFO - ENDPOINT criar terreno chamado largura=0.0 altua=0.0 disponivel=True preco=0.0 descricao='Terreno lindo' endereco=Endereco(rua='string', numero=0, cidade='string', estado='string', cep='string', longitude='string', latitude='string')
+22/07/2025 15:07:19 - INFO - ENDPOINT listar terrenos chamado
+22/07/2025 15:07:19 - INFO - UTILS listar
+22/07/2025 15:07:40 - INFO - ENDPOINT listar pessoas chamado
+22/07/2025 15:07:40 - INFO - UTILS listar
+22/07/2025 15:07:48 - INFO - ENDPOINT linkar terreno a pessoas chamado - pessoa_id: 687fd32d14d398d0842233f2, terreno_id: 687fd34f14d398d0842233f3
+22/07/2025 15:07:48 - INFO - Validação de id : 687fd32d14d398d0842233f2
+22/07/2025 15:07:48 - INFO - Validação de id : 687fd34f14d398d0842233f3
+22/07/2025 15:07:48 - INFO - Terreno de id 687fd34f14d398d0842233f3 adicionado na lista de terrenos da pessoa de id 687fd32d14d398d0842233f2
+22/07/2025 15:07:59 - INFO - ENDPOINT listar todos os terrenos associados a uma id
+22/07/2025 15:07:59 - INFO - Validação de id : 687fd32d14d398d0842233f2
+22/07/2025 15:07:59 - INFO - [Terreno(id='687fd34f14d398d0842233f3', largura=0.0, altua=0.0, disponivel=True, preco=0.0, descricao='Terreno lindo', endereco=Endereco(rua='string', numero=0, cidade='string', estado='string', cep='string', longitude='string', latitude='string'), pessoas_ids=['687fd32d14d398d0842233f2'], construcoes_ids=[])]
+22/07/2025 15:08:16 - INFO - ENDPOINT listar terrenos chamado
+22/07/2025 15:08:16 - INFO - UTILS listar
+22/07/2025 15:08:44 - INFO - ENDPOINT criar construção chamado nome='Casa do Conrado' descricao='string' custo_total=2023020320.0 tipo='string' area=0.0 terreno_id='687fd32d14d398d0842233f2'
+22/07/2025 15:08:44 - INFO - Validação de id : 687fd32d14d398d0842233f2
+22/07/2025 15:08:49 - INFO - ENDPOINT listar construções chamado
+22/07/2025 15:08:49 - INFO - UTILS listar
+22/07/2025 15:08:58 - INFO - ENDPOINT listar obras chamado
+22/07/2025 15:08:58 - INFO - UTILS listar
+22/07/2025 15:09:42 - INFO - ENDPOINT criar obra chamado nome='Obra da cada do Matheus' descricao='Obra grande' inicio=datetime.datetime(2025, 7, 22, 18, 9, 4, 849000, tzinfo=TzInfo(UTC)) fim=datetime.datetime(2025, 9, 22, 18, 9, 4, 849000, tzinfo=TzInfo(UTC)) custo=20202022.0 contrucao_id='687fd3ac14d398d0842233f4'
+22/07/2025 15:09:42 - INFO - Validação de id : 687fd3ac14d398d0842233f4
+22/07/2025 15:09:49 - INFO - ENDPOINT listar obras chamado
+22/07/2025 15:09:49 - INFO - UTILS listar
+22/07/2025 15:10:01 - INFO - ENDPOINT listar construções chamado
+22/07/2025 15:10:01 - INFO - UTILS listar
+22/07/2025 15:11:02 - INFO - ENDPOINT listar construções chamado
+22/07/2025 15:11:02 - INFO - UTILS listar
+22/07/2025 15:11:51 - INFO - ENDPOINT listar construções chamado
+22/07/2025 15:11:51 - INFO - UTILS listar

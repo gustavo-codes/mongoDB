@@ -97,8 +97,7 @@ class ConstrucaoPatch(BaseModel):
     area:Optional[float] = None
 
 class Construcao(ConstrucaoBase,MongoModel):
-    obras_ids:List[str]
-    pass
+    obras_ids: Optional[List[str]] = []
 
 class ObraBase(BaseModel):
     nome:str

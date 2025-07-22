@@ -72,8 +72,8 @@ async def filtro(atributo: str, busca: str):
 @router.post("/")
 async def criar_construcao(construcao: ConstrucaoBase):
     logging.info(f"ENDPOINT criar construção chamado {construcao}")
+    validar_id(construcao.terreno_id)
     try:
-        validar_id(construcao.terreno_id)
         id = ObjectId(await criar("construcao", construcao))
         await construcao_collection.update_one(
             {"_id": id}, {"$set": {"terreno_id": ObjectId(construcao.terreno_id)}}
