@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from models import Pessoa, PessoaBase, PessoaPatch , Terreno
+from models import Pessoa, PessoaBase, PessoaPatch, Terreno
 from typing import List
 from db import pessoas_collection, terrenos_collection
 from bson import ObjectId
@@ -74,7 +74,7 @@ async def filtro(atributo: str, busca: str):
         raise HTTPException(status_code=500, detail="Erro ao filtrar pessoas.")
 
 
-#Todos os terrenos associados a uma id
+# Todos os terrenos associados a uma id
 @router.get("/terrenos/{pessoa_id}", response_model=List[Terreno])
 async def terreno_associados_id(pessoa_id: str):
     """Lista todos os terrenos associados a uma pessoa pelo ID."""
@@ -84,7 +84,9 @@ async def terreno_associados_id(pessoa_id: str):
         pessoa = await pessoas_collection.find_one({"_id": ObjectId(pessoa_id)})
         if not pessoa:
             logging.info(f"Pessoa de id : {pessoa_id} não encontrada.")
-            raise HTTPException(status_code=404, detail=f"Pessoa de id : {pessoa_id} não encontrada.")
+            raise HTTPException(
+                status_code=404, detail=f"Pessoa de id : {pessoa_id} não encontrada."
+            )
         terrenos = []
         for terreno_id in Pessoa.from_mongo(pessoa).terrenos_ids:
             terreno = await terrenos_collection.find_one({"_id": ObjectId(terreno_id)})
@@ -94,7 +96,9 @@ async def terreno_associados_id(pessoa_id: str):
         return terrenos
     except Exception as e:
         logging.error(f"Erro: {e}")
-        raise HTTPException(status_code=500, detail="Erro ao buscar terrenos associados.")
+        raise HTTPException(
+            status_code=500, detail="Erro ao buscar terrenos associados."
+        )
 
 
 # Adicionar uma nova pessoa no banco
