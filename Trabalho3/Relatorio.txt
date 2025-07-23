@@ -1,0 +1,22 @@
+Mário Martins Aragão - 542056
+Gustavo De Freitas Reginaldo - 536187
+
+
+Definidas as entidades
+        Modelação do banco de dados no draw db  -> Gustavo
+        Criação dos Models no python            -> Gustavo
+
+Implementacoes dos cruds
+        Obra, Pessoa -> Mário
+        Terreno, construção -> Gustavo
+
+Logs:
+        Implementação do log       -> Mário
+
+Implementacoes Paginação/ Filtros -> Mário
+
+Consultas complexas -> Mário / Gustavo
+
+
+
+         
