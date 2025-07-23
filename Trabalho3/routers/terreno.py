@@ -1,7 +1,12 @@
 from fastapi import APIRouter, HTTPException
-from models import Terreno, TerrenoBase, TerrenoPatch, Construcao
+from models import Terreno, TerrenoBase, TerrenoPatch, Construcao, Obra
 from typing import List, Dict, Type, TypedDict
-from db import terrenos_collection, pessoas_collection, construcao_collection
+from db import (
+    terrenos_collection,
+    pessoas_collection,
+    construcao_collection,
+    obras_collection,
+)
 from bson import ObjectId
 from motor.motor_asyncio import AsyncIOMotorCollection
 
@@ -14,6 +19,7 @@ from routers.utils import (
     quantidade_total_ocorrencias,
     paginacao,
     busca_parcial,
+    validar_id,
 )
 from logs import logging
 
@@ -42,6 +48,44 @@ async def quantidade_total_de_terrenos():
         raise HTTPException(
             status_code=500, detail="Erro ao acessar o total de terrenos."
         )
+
+
+# Quantidade gasto total em obras por terreno
+@router.get("/terreno/gastos_obras/{terreno_id}")
+async def gasto_obras_por_terreno(terreno_id: str):
+    logging.info("ENDPOINT gasto total em obras por terreno")
+    validar_id(terreno_id)
+    try:
+        terreno = await terrenos_collection.find_one({"_id": ObjectId(terreno_id)})
+        if not terreno:
+            logging.info(f"Terreno de id {terreno_id} não encontrado.")
+            raise HTTPException(
+                status_code=404, detail=f"Terreno de id {terreno_id} não encontrado."
+            )
+
+        terreno = Terreno.from_mongo(terreno)
+        logging.info(f"Terreno encontrado: {terreno}")
+
+        total_cost = 0
+        for construcao_id in terreno.construcoes_ids:
+            logging.info(f"Construção: {construcao_id}")
+            construcao_doc = await construcao_collection.find_one({"_id": ObjectId(construcao_id)})
+            if not construcao_doc:
+                logging.warning(f"Construção de id {construcao_id} não encontrada.")
+                continue
+            construcao = Construcao.from_mongo(construcao_doc)
+            for obra_id in construcao.obras_ids:
+                obra_doc = await obras_collection.find_one({"_id": ObjectId(obra_id)})
+                if not obra_doc:
+                    logging.warning(f"Obra de id {obra_id} não encontrada.")
+                    continue
+                obra = Obra.from_mongo(obra_doc)
+                total_cost += obra.custo
+        return {"gasto_total": total_cost}
+
+    except Exception as e:
+        logging.error(f"Erro ao calcular gasto total em obras por terreno: {e}")
+        raise HTTPException(status_code=500, detail="Erro ao calcular gasto total em obras por terreno.")
 
 
 # Paginação
