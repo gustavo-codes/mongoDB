@@ -32,7 +32,7 @@ async def total_gasto_obras(client_id : str):
         if not pessoa:
             raise HTTPException(status_code=404, detail=f"Pessoa não encontrada!")
         pessoa = Pessoa.from_mongo(pessoa)
-        logging.info(f"A pessoa exite! {pessoa}")
+        logging.info(f"A pessoa existe! {pessoa}")
         count = 0
         #Cada terreno referente a pessoa
         for t in pessoa.terrenos_ids:
@@ -56,10 +56,11 @@ async def total_gasto_obras(client_id : str):
                     if obra:
                         obra = Obra.from_mongo(obra)
                         count+= float(obra.custo)           
-        return {"total gasto " : count}      
+        return {"total gasto" : count}      
     except Exception as e:
         logging.info(f"Erro : {e}")
-        raise HTTPException(status_code=404, detail=f"Erro : {e}")
+        raise HTTPException(status_code=500, detail=f"Erro : {e}")
+
 
 
 # Listar todos os usuários do banco
