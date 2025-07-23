@@ -471,3 +471,90 @@ obras_ids
 23/07/2025 09:57:09 - INFO - ENDPOINT listar pessoas chamado
 23/07/2025 09:57:09 - INFO - UTILS listar
 23/07/2025 09:57:38 - INFO - ENDPOINT criar pessoa chamado nome='Victor' email='vitu@example.com' idade=25 telefone='string' profissao='Professor'
+23/07/2025 10:44:01 - INFO - ENDPOINT listar terrenos chamado
+23/07/2025 10:44:01 - INFO - UTILS listar
+23/07/2025 10:44:13 - INFO - ENDPOINT gasto total em obras por terreno
+23/07/2025 10:44:13 - INFO - Validação de id : 687fd34f14d398d0842233f3
+23/07/2025 10:44:24 - INFO - ENDPOINT gasto total em obras por terreno
+23/07/2025 10:44:24 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+23/07/2025 10:44:36 - INFO - ENDPOINT gasto total em obras por terreno
+23/07/2025 10:44:36 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+23/07/2025 10:45:51 - INFO - ENDPOINT gasto total em obras por terreno
+23/07/2025 10:45:51 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+23/07/2025 10:45:51 - INFO - Terreno encontrado: id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d']
+23/07/2025 10:45:51 - INFO - Contruções
+23/07/2025 10:46:15 - INFO - ENDPOINT gasto total em obras por terreno
+23/07/2025 10:46:15 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+23/07/2025 10:46:16 - INFO - Terreno encontrado: id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d']
+23/07/2025 10:46:16 - INFO - Contruções
+23/07/2025 10:54:06 - INFO - ENDPOINT listar pessoas chamado
+23/07/2025 10:54:06 - INFO - UTILS listar
+23/07/2025 10:54:18 - INFO - ENDPOINT listar terrenos chamado
+23/07/2025 10:54:18 - INFO - UTILS listar
+23/07/2025 10:55:04 - INFO - ENDPOINT criar terreno chamado largura=0.0 altua=0.0 disponivel=True preco=3000.0 descricao='Casa do Mário tambem' endereco=Endereco(rua='string', numero=0, cidade='Santa Bacteria', estado='Canindé', cep='string', longitude='string', latitude='string')
+23/07/2025 10:55:23 - INFO - ENDPOINT listar construções chamado
+23/07/2025 10:55:23 - INFO - UTILS listar
+23/07/2025 10:55:56 - INFO - ENDPOINT listar terrenos chamado
+23/07/2025 10:55:56 - INFO - UTILS listar
+23/07/2025 10:56:20 - INFO - ENDPOINT criar construção chamado nome='Contrução casa santa quintura' descricao='string' custo_total=10000.0 tipo='string' area=0.0 terreno_id='6880e9b87d3cf908300cc849'
+23/07/2025 10:56:20 - INFO - Validação de id : 6880e9b87d3cf908300cc849
+23/07/2025 10:56:27 - INFO - ENDPOINT listar construções chamado
+23/07/2025 10:56:27 - INFO - UTILS listar
+23/07/2025 10:56:56 - INFO - ENDPOINT listar pessoas chamado
+23/07/2025 10:56:56 - INFO - UTILS listar
+23/07/2025 10:57:19 - INFO - ENDPOINT listar terrenos chamado
+23/07/2025 10:57:19 - INFO - UTILS listar
+23/07/2025 10:57:55 - INFO - ENDPOINT listar terrenos chamado
+23/07/2025 10:57:55 - INFO - UTILS listar
+23/07/2025 10:58:17 - INFO - ENDPOINT listar pessoas chamado
+23/07/2025 10:58:17 - INFO - UTILS listar
+23/07/2025 10:58:36 - INFO - ENDPOINT listar terrenos chamado
+23/07/2025 10:58:36 - INFO - UTILS listar
+23/07/2025 10:58:49 - INFO - ENDPOINT linkar terreno a pessoas chamado - pessoa_id: 687ba06d8990fa02bc1148d4, terreno_id: 6880ea047d3cf908300cc84a
+23/07/2025 10:58:49 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+23/07/2025 10:58:49 - INFO - Validação de id : 6880ea047d3cf908300cc84a
+23/07/2025 10:58:49 - INFO - Terreno de id 6880ea047d3cf908300cc84a não encontrado
+23/07/2025 10:58:58 - INFO - ENDPOINT listar terrenos chamado
+23/07/2025 10:58:58 - INFO - UTILS listar
+23/07/2025 10:59:14 - INFO - ENDPOINT linkar terreno a pessoas chamado - pessoa_id: 687ba06d8990fa02bc1148d4, terreno_id: 6880e9b87d3cf908300cc849
+23/07/2025 10:59:14 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+23/07/2025 10:59:14 - INFO - Validação de id : 6880e9b87d3cf908300cc849
+23/07/2025 10:59:14 - INFO - Pessoa de id 687ba06d8990fa02bc1148d4 não encontrada
+23/07/2025 10:59:22 - INFO - ENDPOINT listar pessoas chamado
+23/07/2025 10:59:22 - INFO - UTILS listar
+23/07/2025 10:59:33 - INFO - ENDPOINT linkar terreno a pessoas chamado - pessoa_id: 687ba0a68990fa02bc1148d5, terreno_id: 6880e9b87d3cf908300cc849
+23/07/2025 10:59:33 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+23/07/2025 10:59:33 - INFO - Validação de id : 6880e9b87d3cf908300cc849
+23/07/2025 10:59:33 - INFO - Terreno de id 6880e9b87d3cf908300cc849 adicionado na lista de terrenos da pessoa de id 687ba0a68990fa02bc1148d5
+23/07/2025 10:59:52 - INFO - ENDPOINT de filtro chamado para atributo nome e busca Mário
+23/07/2025 10:59:52 - INFO - Busca parcial no tipo pessoa, atributo buscado nome, valor passado Mário
+23/07/2025 11:00:02 - INFO - ENDPOINT listar construções chamado
+23/07/2025 11:00:02 - INFO - UTILS listar
+23/07/2025 11:00:28 - INFO - ENDPOINT total gasto por pessoa
+23/07/2025 11:00:28 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+23/07/2025 11:00:28 - INFO - A pessoa existe! id='687ba0a68990fa02bc1148d5' nome='Mário' email='marioaragao@alu.ufc.br' idade=21 telefone='85996734867' profissao='Programador' terrenos_ids=['687ba06d8990fa02bc1148d4', '6880e9b87d3cf908300cc849']
+23/07/2025 11:00:28 - INFO - t : 687ba06d8990fa02bc1148d4
+23/07/2025 11:00:28 - INFO - terreno id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d']
+23/07/2025 11:00:28 - INFO - Pessoa tem terreno: id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d'] 
+23/07/2025 11:00:28 - INFO - t : 6880e9b87d3cf908300cc849
+23/07/2025 11:00:28 - INFO - terreno id='6880e9b87d3cf908300cc849' largura=0.0 altua=0.0 disponivel=True preco=3000.0 descricao='Casa do Mário tambem' endereco=Endereco(rua='string', numero=0, cidade='Santa Bacteria', estado='Canindé', cep='string', longitude='string', latitude='string') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['6880ea047d3cf908300cc84a']
+23/07/2025 11:00:28 - INFO - Pessoa tem terreno: id='6880e9b87d3cf908300cc849' largura=0.0 altua=0.0 disponivel=True preco=3000.0 descricao='Casa do Mário tambem' endereco=Endereco(rua='string', numero=0, cidade='Santa Bacteria', estado='Canindé', cep='string', longitude='string', latitude='string') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['6880ea047d3cf908300cc84a'] 
+23/07/2025 11:01:06 - INFO - ENDPOINT listar obras chamado
+23/07/2025 11:01:06 - INFO - UTILS listar
+23/07/2025 11:01:45 - INFO - ENDPOINT listar construções chamado
+23/07/2025 11:01:45 - INFO - UTILS listar
+23/07/2025 11:02:04 - INFO - ENDPOINT criar obra chamado nome='Fundação do Terrneno' descricao='string' inicio=datetime.datetime(2025, 7, 23, 14, 1, 26, 413000, tzinfo=TzInfo(UTC)) fim=datetime.datetime(2025, 7, 23, 14, 1, 26, 413000, tzinfo=TzInfo(UTC)) custo=20000.0 contrucao_id='6880ea047d3cf908300cc84a'
+23/07/2025 11:02:04 - INFO - Validação de id : 6880ea047d3cf908300cc84a
+23/07/2025 11:02:12 - INFO - ENDPOINT total gasto por pessoa
+23/07/2025 11:02:12 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+23/07/2025 11:02:12 - INFO - A pessoa existe! id='687ba0a68990fa02bc1148d5' nome='Mário' email='marioaragao@alu.ufc.br' idade=21 telefone='85996734867' profissao='Programador' terrenos_ids=['687ba06d8990fa02bc1148d4', '6880e9b87d3cf908300cc849']
+23/07/2025 11:02:12 - INFO - t : 687ba06d8990fa02bc1148d4
+23/07/2025 11:02:12 - INFO - terreno id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d']
+23/07/2025 11:02:12 - INFO - Pessoa tem terreno: id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d'] 
+23/07/2025 11:02:12 - INFO - t : 6880e9b87d3cf908300cc849
+23/07/2025 11:02:12 - INFO - terreno id='6880e9b87d3cf908300cc849' largura=0.0 altua=0.0 disponivel=True preco=3000.0 descricao='Casa do Mário tambem' endereco=Endereco(rua='string', numero=0, cidade='Santa Bacteria', estado='Canindé', cep='string', longitude='string', latitude='string') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['6880ea047d3cf908300cc84a']
+23/07/2025 11:02:12 - INFO - Pessoa tem terreno: id='6880e9b87d3cf908300cc849' largura=0.0 altua=0.0 disponivel=True preco=3000.0 descricao='Casa do Mário tambem' endereco=Endereco(rua='string', numero=0, cidade='Santa Bacteria', estado='Canindé', cep='string', longitude='string', latitude='string') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['6880ea047d3cf908300cc84a'] 
+23/07/2025 11:02:42 - INFO - ENDPOINT gasto total em obras por terreno
+23/07/2025 11:02:42 - INFO - Validação de id : 6880e9b87d3cf908300cc849
+23/07/2025 11:02:42 - INFO - Terreno encontrado: id='6880e9b87d3cf908300cc849' largura=0.0 altua=0.0 disponivel=True preco=3000.0 descricao='Casa do Mário tambem' endereco=Endereco(rua='string', numero=0, cidade='Santa Bacteria', estado='Canindé', cep='string', longitude='string', latitude='string') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['6880ea047d3cf908300cc84a']
+23/07/2025 11:02:42 - INFO - Construção: 6880ea047d3cf908300cc84a
