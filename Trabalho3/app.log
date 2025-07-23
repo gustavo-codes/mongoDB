@@ -309,3 +309,122 @@ obras_ids
 22/07/2025 15:11:02 - INFO - UTILS listar
 22/07/2025 15:11:51 - INFO - ENDPOINT listar construções chamado
 22/07/2025 15:11:51 - INFO - UTILS listar
+22/07/2025 22:42:24 - INFO - ENDPOINT listar pessoas chamado
+22/07/2025 22:42:24 - INFO - UTILS listar
+22/07/2025 22:42:53 - INFO - ENDPOINT listar obras chamado
+22/07/2025 22:42:53 - INFO - UTILS listar
+22/07/2025 22:43:10 - INFO - ENDPOINT listar construções chamado
+22/07/2025 22:43:10 - INFO - UTILS listar
+22/07/2025 22:47:25 - INFO - ENDPOINT listar pessoas chamado
+22/07/2025 22:47:25 - INFO - UTILS listar
+22/07/2025 22:47:43 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 22:47:43 - INFO - Validação de id : 687922af77e739465a7a4653
+22/07/2025 22:47:43 - INFO - <Future pending cb=[_chain_future.<locals>._call_check_cancel() at /home/mario/anaconda3/lib/python3.12/asyncio/futures.py:391]>
+22/07/2025 22:48:17 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 22:48:17 - INFO - Validação de id : 687922af77e739465a7a4653
+22/07/2025 22:48:17 - INFO - {'_id': ObjectId('687922af77e739465a7a4653'), 'nome': 'Breno', 'email': 'breno@example.com', 'idade': 18, 'telefone': 'string', 'profissao': 'string'}
+22/07/2025 22:48:33 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 22:48:33 - INFO - Validação de id : 687922af77e739465a7a4653
+22/07/2025 22:48:50 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 22:48:50 - INFO - Validação de id : 687922af77e739465a7a4653
+22/07/2025 22:49:46 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 22:49:46 - INFO - Validação de id : 687922af77e739465a7a4653
+22/07/2025 22:49:46 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 22:49:46 - INFO - Validação de id : 687922af77e739465a7a4653
+22/07/2025 22:54:36 - INFO - ENDPOINT listar terrenos chamado
+22/07/2025 22:54:36 - INFO - UTILS listar
+22/07/2025 22:56:07 - INFO - ENDPOINT listar construções chamado
+22/07/2025 22:56:07 - INFO - UTILS listar
+22/07/2025 22:56:11 - INFO - ENDPOINT listar construções chamado
+22/07/2025 22:56:11 - INFO - UTILS listar
+22/07/2025 22:56:27 - INFO - ENDPOINT listar obras chamado
+22/07/2025 22:56:27 - INFO - UTILS listar
+22/07/2025 23:01:21 - INFO - ENDPOINT listar obras chamado
+22/07/2025 23:01:21 - INFO - UTILS listar
+22/07/2025 23:02:02 - INFO - ENDPOINT criar obra chamado nome='Construir Banheiro' descricao='string' inicio=datetime.datetime(2025, 7, 23, 2, 1, 27, 810000, tzinfo=TzInfo(UTC)) fim=datetime.datetime(2025, 7, 23, 2, 1, 27, 810000, tzinfo=TzInfo(UTC)) custo=10000.0 contrucao_id='687fce15630e5dcd40d8f92d'
+22/07/2025 23:02:02 - INFO - Validação de id : 687fce15630e5dcd40d8f92d
+22/07/2025 23:02:10 - INFO - ENDPOINT listar construções chamado
+22/07/2025 23:02:10 - INFO - UTILS listar
+22/07/2025 23:02:21 - INFO - ENDPOINT listar terrenos chamado
+22/07/2025 23:02:21 - INFO - UTILS listar
+22/07/2025 23:02:40 - INFO - ENDPOINT listar construções chamado
+22/07/2025 23:02:40 - INFO - UTILS listar
+22/07/2025 23:02:50 - INFO - ENDPOINT de filtro chamado para atributo id e busca 687fce15630e5dcd40d8f92d
+22/07/2025 23:02:50 - INFO - Busca parcial no tipo construcao, atributo buscado id, valor passado 687fce15630e5dcd40d8f92d
+22/07/2025 23:02:50 - INFO - Campo procurado é um ID
+22/07/2025 23:02:50 - INFO - Validação de id : 687fce15630e5dcd40d8f92d
+22/07/2025 23:03:05 - INFO - ENDPOINT listar pessoas chamado
+22/07/2025 23:03:05 - INFO - UTILS listar
+22/07/2025 23:03:34 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 23:03:34 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+22/07/2025 23:05:07 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 23:05:07 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+22/07/2025 23:05:58 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 23:05:58 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+22/07/2025 23:05:58 - INFO - A pessoa exite! id='687ba0a68990fa02bc1148d5' nome='Mário' email='marioaragao@alu.ufc.br' idade=21 telefone='85996734867' profissao='Programador' terrenos_ids=['687ba06d8990fa02bc1148d4']
+22/07/2025 23:06:31 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 23:06:31 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+22/07/2025 23:06:31 - INFO - A pessoa exite! id='687ba0a68990fa02bc1148d5' nome='Mário' email='marioaragao@alu.ufc.br' idade=21 telefone='85996734867' profissao='Programador' terrenos_ids=['687ba06d8990fa02bc1148d4']
+22/07/2025 23:06:31 - INFO - oi
+22/07/2025 23:06:55 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 23:06:55 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+22/07/2025 23:06:55 - INFO - A pessoa exite! id='687ba0a68990fa02bc1148d5' nome='Mário' email='marioaragao@alu.ufc.br' idade=21 telefone='85996734867' profissao='Programador' terrenos_ids=['687ba06d8990fa02bc1148d4']
+22/07/2025 23:06:55 - INFO - t : 687ba06d8990fa02bc1148d4
+22/07/2025 23:07:10 - INFO - ENDPOINT listar terrenos chamado
+22/07/2025 23:07:10 - INFO - UTILS listar
+22/07/2025 23:07:26 - INFO - ENDPOINT de filtro chamado para atributo id e busca 687ba06d8990fa02bc1148d4
+22/07/2025 23:07:26 - INFO - Busca parcial no tipo terreno, atributo buscado id, valor passado 687ba06d8990fa02bc1148d4
+22/07/2025 23:07:26 - INFO - Campo procurado é um ID
+22/07/2025 23:07:26 - INFO - Validação de id : 687ba06d8990fa02bc1148d4
+22/07/2025 23:08:01 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 23:08:01 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+22/07/2025 23:08:01 - INFO - A pessoa exite! id='687ba0a68990fa02bc1148d5' nome='Mário' email='marioaragao@alu.ufc.br' idade=21 telefone='85996734867' profissao='Programador' terrenos_ids=['687ba06d8990fa02bc1148d4']
+22/07/2025 23:08:01 - INFO - t : 687ba06d8990fa02bc1148d4
+22/07/2025 23:08:01 - INFO - terreno id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d']
+22/07/2025 23:08:01 - INFO - Pessoa tem terreno: id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d'] 
+22/07/2025 23:08:30 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 23:08:30 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+22/07/2025 23:08:30 - INFO - A pessoa exite! id='687ba0a68990fa02bc1148d5' nome='Mário' email='marioaragao@alu.ufc.br' idade=21 telefone='85996734867' profissao='Programador' terrenos_ids=['687ba06d8990fa02bc1148d4']
+22/07/2025 23:08:30 - INFO - t : 687ba06d8990fa02bc1148d4
+22/07/2025 23:08:30 - INFO - terreno id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d']
+22/07/2025 23:08:30 - INFO - Pessoa tem terreno: id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d'] 
+22/07/2025 23:08:37 - INFO - ENDPOINT listar pessoas chamado
+22/07/2025 23:08:37 - INFO - UTILS listar
+22/07/2025 23:08:43 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 23:08:43 - INFO - Validação de id : 687946d371c7081a9f86ee4e
+22/07/2025 23:08:43 - INFO - A pessoa exite! id='687946d371c7081a9f86ee4e' nome='Cabeça' email='cabeça@example.com' idade=20 telefone='12312312312312312' profissao='Jurgergeee' terrenos_ids=[]
+22/07/2025 23:09:04 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 23:09:04 - INFO - Validação de id : 687946d371c7081a9f86ee4e
+22/07/2025 23:09:04 - INFO - A pessoa exite! id='687946d371c7081a9f86ee4e' nome='Cabeça' email='cabeça@example.com' idade=20 telefone='12312312312312312' profissao='Jurgergeee' terrenos_ids=[]
+22/07/2025 23:09:31 - INFO - ENDPOINT criar obra chamado nome='Pinta Banheiro' descricao='string' inicio=datetime.datetime(2025, 7, 23, 2, 1, 27, 810000, tzinfo=TzInfo(UTC)) fim=datetime.datetime(2025, 7, 23, 2, 1, 27, 810000, tzinfo=TzInfo(UTC)) custo=50020.0 contrucao_id='687fce15630e5dcd40d8f92d'
+22/07/2025 23:09:31 - INFO - Validação de id : 687fce15630e5dcd40d8f92d
+22/07/2025 23:09:37 - INFO - ENDPOINT listar pessoas chamado
+22/07/2025 23:09:37 - INFO - UTILS listar
+22/07/2025 23:09:46 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 23:09:46 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+22/07/2025 23:09:46 - INFO - A pessoa exite! id='687ba0a68990fa02bc1148d5' nome='Mário' email='marioaragao@alu.ufc.br' idade=21 telefone='85996734867' profissao='Programador' terrenos_ids=['687ba06d8990fa02bc1148d4']
+22/07/2025 23:09:46 - INFO - t : 687ba06d8990fa02bc1148d4
+22/07/2025 23:09:46 - INFO - terreno id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d']
+22/07/2025 23:09:46 - INFO - Pessoa tem terreno: id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d'] 
+22/07/2025 23:10:10 - INFO - ENDPOINT listar construções chamado
+22/07/2025 23:10:10 - INFO - UTILS listar
+22/07/2025 23:10:16 - INFO - ENDPOINT listar obras chamado
+22/07/2025 23:10:16 - INFO - UTILS listar
+22/07/2025 23:10:39 - INFO - ENDPOINT criar obra chamado nome='Piscina' descricao='string' inicio=datetime.datetime(2025, 7, 23, 2, 1, 27, 810000, tzinfo=TzInfo(UTC)) fim=datetime.datetime(2025, 7, 23, 2, 1, 27, 810000, tzinfo=TzInfo(UTC)) custo=20000.0 contrucao_id='687fce15630e5dcd40d8f92d'
+22/07/2025 23:10:39 - INFO - Validação de id : 687fce15630e5dcd40d8f92d
+22/07/2025 23:10:44 - INFO - ENDPOINT total gasto por pessoa
+22/07/2025 23:10:44 - INFO - Validação de id : 687ba0a68990fa02bc1148d5
+22/07/2025 23:10:44 - INFO - A pessoa exite! id='687ba0a68990fa02bc1148d5' nome='Mário' email='marioaragao@alu.ufc.br' idade=21 telefone='85996734867' profissao='Programador' terrenos_ids=['687ba06d8990fa02bc1148d4']
+22/07/2025 23:10:44 - INFO - t : 687ba06d8990fa02bc1148d4
+22/07/2025 23:10:44 - INFO - terreno id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d']
+22/07/2025 23:10:44 - INFO - Pessoa tem terreno: id='687ba06d8990fa02bc1148d4' largura=30.0 altua=20.0 disponivel=True preco=500000.0 descricao='Terreno na beira da praia' endereco=Endereco(rua='Rua do Terreno', numero=777, cidade='Fortim', estado='Ceará', cep='123123123', longitude='dad31312', latitude='312313131') pessoas_ids=['687ba0a68990fa02bc1148d5'] construcoes_ids=['687fce15630e5dcd40d8f92d'] 
+22/07/2025 23:11:56 - INFO - ENDPOINT listar pessoas chamado
+22/07/2025 23:11:56 - INFO - UTILS listar
+22/07/2025 23:12:08 - INFO - ENDPOINT listar terrenos chamado
+22/07/2025 23:12:08 - INFO - UTILS listar
+22/07/2025 23:12:19 - INFO - ENDPOINT listar construções chamado
+22/07/2025 23:12:19 - INFO - UTILS listar
+22/07/2025 23:12:30 - INFO - ENDPOINT listar obras chamado
+22/07/2025 23:12:30 - INFO - UTILS listar
+22/07/2025 23:14:02 - INFO - ENDPOINT listar terrenos chamado
+22/07/2025 23:14:02 - INFO - UTILS listar
