@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
-from models import Pessoa, PessoaBase, PessoaPatch, Terreno
+from models import Pessoa, PessoaBase, PessoaPatch, Terreno, Construcao, Obra
 from typing import List
-from db import pessoas_collection, terrenos_collection
+from db import pessoas_collection, terrenos_collection, construcao_collection,obras_collection
 from bson import ObjectId
 from routers.utils import (
     listar,
@@ -17,6 +17,50 @@ from routers.utils import (
 from logs import logging
 
 router = APIRouter(prefix="/pessoas", tags=["Pessoas"])
+
+
+#Total gasto por pessoa em obras
+@router.get("/total_gasto_obras/{cliente_id}")
+async def total_gasto_obras(client_id : str):
+    logging.info("ENDPOINT total gasto por pessoa")
+    validar_id(client_id)
+    try:
+        # Checar se a pessoa existe
+        pessoa = await pessoas_collection.find_one(
+            {"_id" : ObjectId(client_id)}
+        )
+        if not pessoa:
+            raise HTTPException(status_code=404, detail=f"Pessoa não encontrada!")
+        pessoa = Pessoa.from_mongo(pessoa)
+        logging.info(f"A pessoa existe! {pessoa}")
+        count = 0
+        #Cada terreno referente a pessoa
+        for t in pessoa.terrenos_ids:
+            logging.info(f"t : {t}")
+            #Busca o terreno
+            terreno = await terrenos_collection.find_one(
+                {"_id" : ObjectId(t)}
+            )
+            terreno = Terreno.from_mongo(terreno)
+            logging.info(f"terreno {terreno}")
+            logging.info(f"Pessoa tem terreno: {terreno} ")
+            for c in terreno.construcoes_ids:
+                construcao = await construcao_collection.find_one(
+                    {"_id":ObjectId(c)}
+                )
+                construcao = Construcao.from_mongo(construcao)
+                for o in construcao.obras_ids:
+                    obra = await obras_collection.find_one(
+                        {"_id":ObjectId(o)}
+                    )
+                    if obra:
+                        obra = Obra.from_mongo(obra)
+                        count+= float(obra.custo)           
+        return {"total gasto" : count}      
+    except Exception as e:
+        logging.info(f"Erro : {e}")
+        raise HTTPException(status_code=500, detail=f"Erro : {e}")
+
 
 
 # Listar todos os usuários do banco

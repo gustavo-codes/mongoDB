@@ -18,7 +18,7 @@ from routers.utils import (
 )
 from logs import logging
 
-router = APIRouter(prefix="/obras", tags=["Obras 🧱"])
+router = APIRouter(prefix="/obras", tags=["Obras"])
 
 
 # Listar todas as obras
