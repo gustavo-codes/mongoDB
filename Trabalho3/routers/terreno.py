@@ -17,7 +17,7 @@ from routers.utils import (
 )
 from logs import logging
 
-router = APIRouter(prefix="/terrenos", tags=["Terenos 🏕️"])
+router = APIRouter(prefix="/terrenos", tags=["Terrenos"])
 
 
 @router.get("/", response_model=List[Terreno])
