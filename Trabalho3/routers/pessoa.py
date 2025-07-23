@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from models import Pessoa, PessoaBase, PessoaPatch , Terreno
+from models import Pessoa, PessoaBase, PessoaPatch, Terreno
 from typing import List
 from db import pessoas_collection, terrenos_collection
 from bson import ObjectId
@@ -22,7 +22,6 @@ router = APIRouter(prefix="/pessoas", tags=["Pessoas"])
 # Listar todos os usuários do banco
 @router.get("/", response_model=List[Pessoa])
 async def listar_pessoas():
-    """Lista todas as pessoas cadastradas."""
     logging.info("ENDPOINT listar pessoas chamado")
     try:
         pessoas = await listar("pessoa")
@@ -35,7 +34,6 @@ async def listar_pessoas():
 # Quantidade total de usuários
 @router.get("/quantidade_usuarios")
 async def quantidade_total_de_usuarios():
-    """Retorna a quantidade total de pessoas cadastradas."""
     logging.info("ENDPOINT listar quantidade de usuários chamado")
     try:
         total = await quantidade_total_ocorrencias("pessoa")
@@ -50,7 +48,6 @@ async def quantidade_total_de_usuarios():
 # Paginação
 @router.get("/paginacao")
 async def paginacao_usuario(pagina: int = 1, limite: int = 10):
-    """Retorna uma página de pessoas cadastradas."""
     logging.info(f"ENDPOINT de paginacao chamado - pagina: {pagina}, limite: {limite}")
     try:
         return await paginacao("pessoa", pagina, limite)
@@ -62,7 +59,6 @@ async def paginacao_usuario(pagina: int = 1, limite: int = 10):
 # Filtro por atributo específico
 @router.get("/filter/")
 async def filtro(atributo: str, busca: str):
-    """Filtra pessoas por atributo específico."""
     logging.info(f"ENDPOINT de filtro chamado para atributo {atributo} e busca {busca}")
     if atributo not in Pessoa.model_fields:
         logging.warning(f"Atributo de filtro inválido: {atributo}")
@@ -74,27 +70,30 @@ async def filtro(atributo: str, busca: str):
         raise HTTPException(status_code=500, detail="Erro ao filtrar pessoas.")
 
 
-#Todos os terrenos associados a uma id
+# Todos os terrenos associados a uma id
 @router.get("/terrenos/{pessoa_id}", response_model=List[Terreno])
 async def terreno_associados_id(pessoa_id: str):
     """Lista todos os terrenos associados a uma pessoa pelo ID."""
     logging.info("ENDPOINT listar todos os terrenos associados a uma id")
+    validar_id(pessoa_id)
     try:
-        validar_id(pessoa_id)
         pessoa = await pessoas_collection.find_one({"_id": ObjectId(pessoa_id)})
         if not pessoa:
             logging.info(f"Pessoa de id : {pessoa_id} não encontrada.")
-            raise HTTPException(status_code=404, detail=f"Pessoa de id : {pessoa_id} não encontrada.")
+            raise HTTPException(
+                status_code=404, detail=f"Pessoa de id : {pessoa_id} não encontrada."
+            )
         terrenos = []
         for terreno_id in Pessoa.from_mongo(pessoa).terrenos_ids:
             terreno = await terrenos_collection.find_one({"_id": ObjectId(terreno_id)})
             if terreno:
                 terrenos.append(Terreno.from_mongo(terreno))
-        logging.info(terrenos)
         return terrenos
     except Exception as e:
         logging.error(f"Erro: {e}")
-        raise HTTPException(status_code=500, detail="Erro ao buscar terrenos associados.")
+        raise HTTPException(
+            status_code=500, detail="Erro ao buscar terrenos associados."
+        )
 
 
 # Adicionar uma nova pessoa no banco
@@ -113,13 +112,12 @@ async def criar_pessoa(pessoa: PessoaBase):
 # Adicionar um terreno a uma pessoa
 @router.post("/{pessoa_id}/adicionar-terreno/{terreno_id}")
 async def adicionar_terreno_a_pessoa(pessoa_id: str, terreno_id: str):
-    """Adiciona um terreno à lista de terrenos de uma pessoa."""
     logging.info(
         f"ENDPOINT linkar terreno a pessoas chamado - pessoa_id: {pessoa_id}, terreno_id: {terreno_id}"
     )
+    validar_id(pessoa_id)
+    validar_id(terreno_id)
     try:
-        validar_id(pessoa_id)
-        validar_id(terreno_id)
         terreno = await terrenos_collection.find_one({"_id": ObjectId(terreno_id)})
         pessoa = await pessoas_collection.find_one({"_id": ObjectId(pessoa_id)})
         if terreno is None:
@@ -152,7 +150,6 @@ async def adicionar_terreno_a_pessoa(pessoa_id: str, terreno_id: str):
 # Atualizar Pessoa
 @router.put("/{pessoa_id}")
 async def atualizar_pessoa(pessoa_id: str, pessoa: PessoaBase):
-    """Atualiza os dados de uma pessoa."""
     logging.info(
         f"ENDPOINT atualizar pessoa chamado com o id {pessoa_id} e corpo {pessoa}"
     )
@@ -166,7 +163,6 @@ async def atualizar_pessoa(pessoa_id: str, pessoa: PessoaBase):
 
 @router.patch("/{pessoa_id}")
 async def modificar_pessoa(pessoa_id: str, pessoa: PessoaPatch):
-    """Modifica parcialmente os dados de uma pessoa."""
     try:
         resultado = await patch("pessoa", pessoa_id, pessoa)
         return {"message": "Pessoa modificada com sucesso.", "data": resultado}
@@ -178,10 +174,9 @@ async def modificar_pessoa(pessoa_id: str, pessoa: PessoaPatch):
 # Deletar pessoa
 @router.delete("/{pessoa_id}")
 async def deletar_pessoa(pessoa_id: str):
-    """Remove uma pessoa do banco de dados."""
     logging.info(f"ENDPOINT de deletar pessoa chamado para pessoa de id {pessoa_id}")
+    validar_id(pessoa_id)
     try:
-        validar_id(pessoa_id)
         pessoa = await pessoas_collection.find_one({"_id": ObjectId(pessoa_id)})
         if not pessoa:
             logging.info(f"Pessoa de id {pessoa_id} não encontrada")

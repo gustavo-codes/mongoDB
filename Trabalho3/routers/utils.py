@@ -43,7 +43,9 @@ async def quantidade_total_ocorrencias(tipo: str):
         return await map[tipo]["collection"].count_documents({})
     except Exception as e:
         logging.error(f"Erro ao contar documentos do tipo {tipo}: {e}")
-        raise HTTPException(status_code=500, detail=f"Erro ao contar documentos do tipo {tipo}.")
+        raise HTTPException(
+            status_code=500, detail=f"Erro ao contar documentos do tipo {tipo}."
+        )
 
 
 async def busca_parcial(tipo: str, campo: str, valor: str):
@@ -55,7 +57,9 @@ async def busca_parcial(tipo: str, campo: str, valor: str):
         # Saber se o campo existe no modelo
         if campo not in map[tipo]["type"].__fields__ and campo != "id":
             logging.warning(f"Campo {campo} não existe no modelo {tipo}")
-            raise HTTPException(status_code=400, detail=f"Campo {campo} não existe no modelo {tipo}.")
+            raise HTTPException(
+                status_code=400, detail=f"Campo {campo} não existe no modelo {tipo}."
+            )
 
         if campo == "id":
             logging.info("Campo procurado é um ID")
@@ -105,8 +109,15 @@ async def paginacao(tipo: str, pagina: int = 1, limite: int = 10):
 
 
 async def listar(tipo: str):
-    data = await map[tipo]["collection"].find().to_list()
-    return [map[tipo]["type"].from_mongo(d) for d in data]
+    logging.info("UTILS listar")
+    try:
+        data = await map[tipo]["collection"].find().to_list()
+        return [map[tipo]["type"].from_mongo(d) for d in data]
+    except Exception as e:
+        logging.info(f"Erro ao listar atributos no utils. Error: {e}")
+        raise HTTPException(
+            status_code=400, detail=f"Erro ao listar atributos no utils. Error: {e}"
+        )
 
 
 async def criar(tipo: str, data):
